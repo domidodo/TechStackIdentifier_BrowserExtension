@@ -39,11 +39,12 @@ The extension reads a specific meta-tag from the HTML head and updates the brows
 
 <ol>
 <li><a href="#about-the-project">About The Project</a></li>
+<li><a href="#key-features">Key features</a></li>
 <li><a href="#built-with">Built With</a></li>
 <li><a href="#screenshots">Screenshots</a></li>
+<li><a href="#installation">Installation</a></li>
 <li><a href="#website-integration">Website Integration</a></li>
 <li><a href="#configuration">Configuration</a></li>
-<li><a href="#installation">Installation</a></li>
 <li><a href="#contributing">Contributing</a></li>
 <li><a href="#license">License</a></li>
 </ol>
@@ -54,7 +55,7 @@ The extension reads a specific meta-tag from the HTML head and updates the brows
 
 When working with multiple environments like Production, Staging, and Development, it’s easy to lose track of which tab represents which instance. The TechStack Identifier solves this by providing immediate visual feedback directly in your browser's toolbar.
 
-## Key features:
+## Key features
 
 - Auto-Detection: Scans for `<meta name="company:tech">` tags.
 - Profile-Based: Apply consistent colors/labels across multiple domains using profiles.
@@ -73,10 +74,27 @@ When working with multiple environments like Production, Staging, and Developmen
 
 ## Screenshots
 
-<img src="screenshots/Screenshot highlighting.png" width="45%" alt="Highlighting">
+<div align="center">
+  <img src="screenshots/screenshot.png" width="45%" alt="Highlighting">
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- INSTALLATION -->
+
+## Installation
+
+FireFox: <br/>
+https://addons.mozilla.org/en-US/firefox/addon/techstack-identifier/
+
+
+Google Chrome: <br/>
+https://chrome.google.com/webstore/detail/techstack-identifier/bppcohfjnmjlengdelbjcepjmeackcnb
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- INTEGRATION -->
 
@@ -113,20 +131,6 @@ The extension is fully customizable via a JSON editor in the settings.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- INSTALLATION -->
-
-## Installation
-
-FireFox: <br/>
-https://addons.mozilla.org/en-US/firefox/addon/steam-game-covers/
-
-
-Google Chrome: <br/>
-https://chrome.google.com/webstore/detail/steam-game-covers/llebobhdlimlfpiebmdjmjbkipmcfmap
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
