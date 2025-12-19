@@ -3,6 +3,14 @@
   "name": "TechStack Identifier",
   "version": "2.2",
   "description": "Identifies web environments via meta-tags with profile-based configuration.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{13c41688-2c03-4c21-9128-d6384fc52b1a}",
+	  "data_collection_permissions": {
+       "required": ["none"]
+      }
+    }
+  },
   "permissions": ["activeTab", "storage", "scripting"],
   "icons": {
     "16": "img/icon_16.png",
