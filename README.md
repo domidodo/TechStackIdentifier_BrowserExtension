@@ -20,7 +20,7 @@
 <br />
 <br />
 <a href="https://github.com/domidodo/TechStackIdentifier_BrowserExtension">
-  <img src="extension/img/icon_64.png" alt="Logo" width="100" height="100">
+  <img src="extension/img/icon_64.png" alt="Logo" width="64" height="64">
 </a>
 <h3 align="center">TechStack Identifier (browser extension)</h3>
 
