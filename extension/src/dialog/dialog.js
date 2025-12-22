@@ -1,3 +1,8 @@
+async function loadWikiUrl() {
+  const result = await chrome.storage.local.get("config");
+  return result?.config?.wikiUrl ?? "https://github.com/domidodo/TechStackIdentifier_BrowserExtension/wiki";
+}
+
 async function init() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   chrome.action.getTitle({ tabId: tab.id }, (titleStr) => {
@@ -15,9 +20,22 @@ async function init() {
       }
 	}
   });
-
-  document.getElementById('opts').onclick = () => {
+  
+  document.getElementById("btn-settings").addEventListener("click", () => {
     chrome.runtime.openOptionsPage();
-  };
+  });
+  
+  const wikiUrl = await loadWikiUrl();
+  document.getElementById("btn-docs").addEventListener("click", () => {
+  	chrome.tabs.create({
+  		url: wikiUrl
+  	});
+  });
+  
+  document.getElementById("btn-github").addEventListener("click", () => {
+  	chrome.tabs.create({
+  		url: "https://github.com/domidodo/TechStackIdentifier_BrowserExtension/"
+  	});
+  });
 }
 init();
