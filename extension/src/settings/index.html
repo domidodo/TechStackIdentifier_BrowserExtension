@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+  <title>TechStack Identifier - Settings</title>
+  <link rel="icon" href="../../img/icon_32.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../../img/icon_32.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../css/settings.css" media="all">
+</head>
+<body>
+
+<a href="https://github.com/domidodo/TechStackIdentifier_BrowserExtension" target="_blank" id="forkme_banner">
+	<img src="../../img/forkme_right_red.png" alt="">
+</a>
+<div class="header">
+  <h1>TechStack Identifier Configuration</h1>
+</div>
+
+<div class="tag-info">
+  <h3>1. Required Meta-Tag</h3>
+  <p>To detect the environment, the website must include this tag in the <code>&lt;head&gt;</code>:</p>
+  <code>&lt;meta name="company:tech" content="S" /&gt;</code>
+  <p><small>(Content values like "S", "P", ... are matched against your profiles below.)</small></p>
+</div>
+
+<div class="main-layout">
+  <div class="editor-part">
+    <h3>JSON Configuration</h3>
+    <textarea id="configJson" placeholder="Paste your JSON configuration here..."></textarea>
+    <button id="save">Save Configuration</button>
+    <div id="status"></div>
+  </div>
+
+  <div class="info-part">
+    <h3>Documentation</h3>
+    <strong>profiles</strong>
+    <p>Define reusable display sets. Each key (e.g. "S" = Staging) needs a <code>label</code>, <code>color</code>, and <code>badge</code> text.</p>
+
+    <strong>domainMapping</strong>
+    <p>Maps hostnames to profiles. <b>Includes all subdomains</b> (e.g. <code>google.com</code> also covers <code>mail.google.com</code>).</p>
+
+    <strong>exceptions</strong>
+    <p>Forces display for <b>EXACT URL matches only</b>. This bypasses the meta-tag check completely.</p>
+
+    <h3>Example Template</h3>
+    <pre>
+{
+  "profiles": {
+    "standard": {
+      "S": { "label": "Staging", "color": "#1E90FF", "badge": "STG" },
+      "P": { "label": "Production", "color": "#FF0000", "badge": "PRD" }
+    }
+  },
+  "domainMapping": {
+    "default": "standard",
+    "example.com": "standard"
+  },
+  "exceptions": {
+    "https://example.com/special": { 
+      "label": "Exception", "color": "#000", "badge": "EX" 
+    }
+  }
+}</pre>
+  </div>
+</div>
+<script src="settings.js"></script>
+</body>
+</html>

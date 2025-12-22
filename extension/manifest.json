@@ -18,16 +18,16 @@
     "64": "img/icon_64.png"
   },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "src/dialog/index.html"
   },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["src/background.js"]
   },
-  "options_page": "options.html",
+  "options_page": "src/settings/index.html",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "js": ["src/content.js"],
       "run_at": "document_idle"
     }
   ]
