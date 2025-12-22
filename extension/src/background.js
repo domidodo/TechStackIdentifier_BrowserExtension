@@ -44,3 +44,9 @@ chrome.runtime.onMessage.addListener(async (message, sender) => {
     chrome.action.setTitle({ title: JSON.stringify(finalData), tabId: tabId });
   }
 });
+
+chrome.runtime.onInstalled.addListener((details) => {
+  if (details.reason === "install") {
+    chrome.runtime.openOptionsPage();
+  }
+});
