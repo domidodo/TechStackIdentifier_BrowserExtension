@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "TechStack Identifier",
-  "version": "2.2",
+  "version": "1.0",
   "description": "Identifies web environments via meta-tags with profile-based configuration.",
   "browser_specific_settings": {
     "gecko": {
